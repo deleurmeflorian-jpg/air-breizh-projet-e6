@@ -14,15 +14,30 @@ Mettre en place un système de contrôle environnemental d'une baie serveur via 
 - Enregistrement des données dans une base MariaDB
 
 ## Technologies utilisées
-- **Raspberry Pi** (Raspbian)
-- **Python 3** (threads concurrents)
-- **MariaDB** (base de données `metrologie`)
+- **Raspberry Pi** (Raspbian) — Python 3, threads concurrents
+- **Windows Server 2022** — Hyper-V, machines virtuelles Windows/Linux
+- **MariaDB** — base de données `metrologie`
+- **Grafana** — tableau de bord de supervision
 - Capteurs : DHT20, SDS011, ILS, relais Songle
 
-## Mon rôle (Étudiant 1)
+## Répartition par étudiant
+
+### Étudiant 1 – Florian (capteurs & Raspberry Pi)
 - Installation et configuration du Raspberry Pi
-- Câblage et mise en œuvre de tous les capteurs
+- Câblage et mise en œuvre des capteurs (DHT20, SDS011, ILS, relais)
 - Développement des scripts Python (lecture capteurs, relais, digicode, BDD)
 - Tests et validation du système
 
-## 🔗 Projet réalisé en équipe de 3 étudiants
+### Étudiant 2 – Mathéo (infrastructure & métriques)
+- Mise en œuvre de l'environnement Hyper-V (2 hôtes physiques)
+- Création de machines virtuelles Windows et Linux
+- Collecte des métriques CPU, RAM, température des hôtes et VMs
+- Mise en place de l'onduleur Tripp Lite
+- Simulation d'attaques et validation des indicateurs
+
+### Étudiant 3 – Eliott (base de données & supervision)
+- Conception et gestion de la base de données MariaDB
+- Développement des pages PHP (enregistrement et authentification)
+- Interface d'administration et de supervision
+- Tableau de bord Grafana
+- Génération de rapports et centralisation 
